@@ -1,0 +1,66 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="bgClip">
+      <rect x="8" y="8" width="1008" height="1008" rx="220" ry="220" />
+    </clipPath>
+
+    <radialGradient id="bgGlow" cx="18%" cy="10%" r="85%">
+      <stop offset="0%" stop-color="#4a3c8c" />
+      <stop offset="45%" stop-color="#241a4a" />
+      <stop offset="100%" stop-color="#0a0a16" />
+    </radialGradient>
+
+    <linearGradient id="tileImage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9dc2" />
+      <stop offset="100%" stop-color="#e8447f" />
+    </linearGradient>
+    <linearGradient id="tileCode" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5affc9" />
+      <stop offset="100%" stop-color="#04d488" />
+    </linearGradient>
+    <linearGradient id="tileVideo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dea3ff" />
+      <stop offset="100%" stop-color="#a34ee0" />
+    </linearGradient>
+    <linearGradient id="tileAudio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#84e0ff" />
+      <stop offset="100%" stop-color="#2ba3d6" />
+    </linearGradient>
+    <linearGradient id="tileDoc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe680" />
+      <stop offset="100%" stop-color="#e0b400" />
+    </linearGradient>
+
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.38" />
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+  </defs>
+
+  <g clip-path="url(#bgClip)">
+    <rect x="8" y="8" width="1008" height="1008" fill="url(#bgGlow)" />
+
+    <!-- treemap tiles -->
+    <g filter="url(#softBlur)" opacity="0.55">
+      <rect x="120" y="120" width="460" height="500" rx="26" fill="#ff2f7e" />
+    </g>
+
+    <rect x="120" y="120" width="460" height="500" rx="26" fill="url(#tileImage)" />
+    <rect x="120" y="636" width="460" height="268" rx="26" fill="url(#tileCode)" />
+    <rect x="596" y="120" width="308" height="250" rx="26" fill="url(#tileVideo)" />
+    <rect x="596" y="386" width="308" height="250" rx="26" fill="url(#tileAudio)" />
+    <rect x="596" y="652" width="308" height="252" rx="26" fill="url(#tileDoc)" />
+
+    <!-- glass sheen across the whole icon -->
+    <rect x="8" y="8" width="1008" height="560" fill="url(#sheen)" />
+
+    <!-- inner border for definition -->
+    <rect x="10" y="10" width="1004" height="1004" rx="218" ry="218"
+          fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="4" />
+  </g>
+</svg>
